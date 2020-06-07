@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <title>Effort Utilization</title>
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity=
+"sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity=
+"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity=
+"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity=
+"sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+        <!--Popper-->
+        <script src="js/libraries/popper.min.js" defer></script>
+        <!--Tooltip-->
+        <script src="js/libraries/tooltip.min.js" defer></script>
+        <!--Tippy-->
+        <link rel="stylesheet" href="css/tippy.css">
+        <script src="js/libraries/tippy.all.min.js"defer></script>
+        <!--D3-->
+        <script type="text/javascript"
+	src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.13/c3.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.13/c3.css"
+	rel="stylesheet" type="text/css">
+        
+        <!--User stylesheets and script-->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/datetimemanager.js" defer></script>
+        <script src="js/effortdatamanager.js" defer></script>
+
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark customnavigation">
+            <a class="navbar-brand" href="#">
+                EFFORT UTILIZATION
+            </a>
+            
+            <a class="navbar-brand" href="#">
+            <img src="images/cisco-logo.png"  height="30" class="d-inline-block align-top" alt="">
+            </a>
+            
+            <a class="navbar-brand" href="#">
+                Welcome, panpawar
+            </a>
+        </nav>
+
+        <div class="container-fluid applicationcontainer">
+            <div class="row calendarcontainer">
+                <div class="col-md-3 calendarhead">
+                    <div class="removemargins">
+                        <span class="calendarheaddateday">Thursday</span><br><span class="calendarheaddate">29</span><br><span class=
+"calendarheaddatedetailed">December, 2018</span>
+                    </div>
+                    <div id="effortchartdiv">
+                        <div id="effortchart"></div>
+                    </div>
+                </div>
+                <div class="col-md-9 calendarbody">
+                    <div class="yearcontainer row">
+                        <div class="col-xs-6 offset-xs-6 col-sm-5 offset-sm-7 col-md-3 offset-md-9"><h3><i class="arrow left"></i><span class=
+"yearcolor">2018</span><i class="arrow right"></i></h3></div>
+                    </div>
+                    <br>
+                    <div class="monthcontainer row">
+                        <div class="col">JAN</div>
+                        <div class="col">FEB</div>
+                        <div class="col">MAR</div>
+                        <div class="col">APR</div>
+                        <div class="col">MAY</div>
+                        <div class="col">JUN</div>
+                        <div class="col">JUL</div>
+                        <div class="col">AUG</div>
+                        <div class="col">SEP</div>
+                        <div class="col">OCT</div>
+                        <div class="col">NOV</div>
+                        <div class="col">DEC</div>
+                    </div>
+                    <table class="datecontainer table table-borderless table-sm">
+                        <thead>
+                            <tr>
+                                <td><div class="row"><div class="col-xs-8 col-sm-8 col-md-5 offset-md-3">MON</div></div></td>
+                                <td><div class="row"><div class="col-xs-8 col-sm-8 col-md-5 offset-md-3">TUE</div></div></td>
+                                <td><div class="row"><div class="col-xs-8 col-sm-8 col-md-5 offset-md-3">WED</div></div></td>
+                                <td><div class="row"><div class="col-xs-8 col-sm-8 col-md-5 offset-md-3">THU</div></div></td>
+                                <td><div class="row"><div class="col-xs-8 col-sm-8 col-md-5 offset-md-3">FRI</div></div></td>
+                                <td><div class="row"><div class="col-xs-8 col-sm-8 col-md-5 offset-md-3">SAT</div></div></td>
+                                <td><div class="row"><div class="col-xs-8 col-sm-8 col-md-5 offset-md-3">SUN</div></div></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 red">01</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 red">02</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">03</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 red">04</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">05</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">06</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">07</div></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">08</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">09</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">10</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">11</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">12</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">13</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">14</div></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">15</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">16</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">17</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">18</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">19</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">20</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">21</div></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">22</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">23</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">24</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">25</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">26</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">27</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">28</div></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">29</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">30</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 ">31</div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 "></div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 "></div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 "></div></div></td>
+                                <td><div class="row"><div class=" col-xs-8 col-sm-8 col-md-5 offset-md-3 "></div></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div id="myTemplate">
+            <h4>EFFORT DETAILS</h4>
+            <table class='table table-md table-borderless efforttable'>
+                <tr>
+                    <th>TASK</th>
+                    <th>TASK DESCRIPTION</th>
+                    <th>TIME(IN HOURS)</th>
+                    <th>TRACK</th>
+                </tr>
+                <tr>
+                    <td>Incident</td>
+                    <td>Analysis for INC1210670</td>
+                    <td>1</td>
+                    <td>E2E</td>
+                </tr>
+                <tr>
+                    <td>Bug Fixing</td>
+                    <td>Fixed a bug in wsx</td>
+                    <td>3</td>
+                    <td>WSX</td>
+                </tr>
+                <tr>
+                    <td>Test Cases</td>
+                    <td>Written test cases for UMR</td>
+                    <td>2</td>
+                    <td>UMR</td>
+                </tr>
+                <tr>
+                    <td>KT</td>
+                    <td>KT on Docker</td>
+                    <td>1</td>
+                    <td>CST</td>
+                </tr>
+                <tr>
+                    <td>Development</td>
+                    <td>Perl To EDI Migration</td>
+                    <td>6</td>
+                    <td>EDI Legacy</td>
+                </tr>
+            </table>
+        </div>
+        
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.13/c3.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.13/c3.css" rel="stylesheet" type="text/css">
+        <script src="js/datetimemanager.js"></script>
+        <script src="js/effortdatamanager.js"></script>
+    </body>
+</html>

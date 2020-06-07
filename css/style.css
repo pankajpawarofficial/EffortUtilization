@@ -1,0 +1,207 @@
+*{
+    font-family: serif;
+}
+
+@font-face {
+    font-family: archivoblack;
+    src: url(/fonts/ArchivoBlack-Regular.ttf);
+}
+
+.customnavigation{
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.brandhead{
+    color: white;
+}
+
+body{
+    background: lightgrey;   
+}
+
+.applicationcontainer{
+}
+
+
+/*----------------------------------------------------------Calendar----------------------------------------------------------*/
+.calendarcontainer{
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    background: white;
+    margin-top: 1em;
+    margin-left: .1em;
+    margin-right: .1em;
+    margin-bottom: 1em;
+}
+
+.calendarhead{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*background: linear-gradient(to right, #F2C94C, #F2994A);*/
+	background: radial-gradient(ellipse at center, rgba(38,98,141,1) 0%, rgba(14,55,87,1) 100%);
+}
+
+/*-------------------------------------------------------Calendar Head-------------------------------------------------------*/
+.calendarheaddate{
+    margin: 0 auto;
+    font-size: 10em;
+    color: white;
+    font-weight: bolder;
+}
+
+.calendarheaddateday{
+    position: relative;
+    top: 1.5em;
+    font-size: 2em;
+    color: white;
+}
+
+.calendarheaddatecontainer{
+    text-align: center;
+}
+
+.calendarheaddatedetailed{
+    margin: 0 auto;
+    font-size: 2em;
+    color: white;
+    position: relative;
+    bottom: 1.5em;
+    
+}
+
+/*-------------------------------------------------------Calendar Body-------------------------------------------------------*/
+.calendarbody{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.yearcontainer{
+    text-align: right;
+}
+
+.yearcolor{
+    color: lightgray;
+}
+
+
+/*---------------------------------------------------------year arrow---------------------------------------------------------*/
+.arrow{
+    border: solid lightgray;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 7px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+/*--------------------------------------------------date day month container--------------------------------------------------*/
+.monthcontainer{
+    margin:2px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.monthcontainer div{
+    text-align: center;
+    color: grey;
+}
+.weekcontainer{
+    color: grey;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.removemargins{
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.daycontainer .customcol{
+    text-align: center;
+}
+
+.red{
+    border:2px solid red;
+}
+
+.green{
+    border:3px dashed lightgreen;
+}
+
+/*-----------------------------------------------------------tippy-----------------------------------------------------------*/
+.tippy-backdrop{
+    background: rgba(0,0,0,0.5835376386882878);
+}
+
+.tippy-tooltip.honeybee-theme{
+    background: rgba(0,0,0,0.7);
+}
+
+.efforttable{
+    background: white;  
+}
+
+.efforttable tr th{
+    text-align: center;
+    background-color: #215982;
+    color: white;
+}
+
+.efforttable tr td{
+    text-align: left;
+}
+
+.efforttable tr:nth-child(odd){
+    background-color: #2159821a;
+    text-align: center;
+}
+
+#mytemplate{
+    display: none;
+}
+
+#effortchartdiv{
+    border-radius: 4px;
+    background: #ffffffc4;
+}
+
+.datecontainer{
+    text-align: center;
+}
+
+
+.datecontainer thead tr td{
+    color: grey;
+}
+/*.datecontainer thead tr{
+    border: none;
+}
+
+.datecontainer thead tr td{
+    border: none;
+}
+
+.datecontainer tbody tr{
+    border: none;
+}
+
+.datecontainer tbody tr td{
+    border: none;
+}*/
+
+.datecontainer tbody tr td div{
+    border-radius: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+    
